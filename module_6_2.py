@@ -4,8 +4,8 @@ class Vehicle:
     def __init__(self, owner, __model, __color, __engine_power):
         self.owner = owner
         self.__model = __model
-        self.__engine_power = __engine_power
         self.__color = __color
+        self.__engine_power = __engine_power
 
     def get_model(self):
         return f'Модель: {self.__model}'
@@ -23,8 +23,8 @@ class Vehicle:
         print(f'Владелец: {self.owner}')
 
     def set_color(self, new_color):
-        for i in range(len(Vehicle.__COLOR_VARIANTS)):
-            if new_color.upper() == Vehicle.__COLOR_VARIANTS[i].upper():
+        for i in range(len(self.__COLOR_VARIANTS)):
+            if new_color.upper() == self.__COLOR_VARIANTS[i].upper():
                 self.__color = new_color
                 return
         else:
